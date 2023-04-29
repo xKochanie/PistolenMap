@@ -131,23 +131,6 @@ L.marker([51.5, -0.09]).addTo(map)
     console.log(singleMarker.toGeoJSON())
 
 
-    /*==============================================
-                GEOJSON
-    ================================================*/
-    var pointData = L.geoJSON(pointJson).addTo(map)
-    var lineData = L.geoJSON(lineJson).addTo(map)
-    var polygonData = L.geoJSON(polygonJson, {
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(`<b>Name: </b>` + feature.properties.name)
-        },
-        style: {
-            fillColor: 'red',
-            fillOpacity: 1,
-            color: '#c0c0c0',
-        }
-    }).addTo(map);
-
-
 
     /*==============================================
                     LAYER CONTROL
